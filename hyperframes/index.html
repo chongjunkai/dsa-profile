@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Enzo DSA Introduction | HyperFrames</title>
+  <style>
+    @font-face{font-family:"DM Sans";src:url("assets/fonts/dm-sans.woff2") format("woff2");font-style:normal;font-weight:500 700;font-display:swap}
+    @font-face{font-family:"Space Grotesk";src:url("assets/fonts/space-grotesk.woff2") format("woff2");font-style:normal;font-weight:600 700;font-display:swap}
+    *{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#08131f}.stage{position:relative;width:1920px;height:1080px;overflow:hidden;background:#08131f;color:#fff;font-family:"DM Sans",sans-serif}.grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:80px 80px}.glow{position:absolute;width:760px;height:760px;right:-180px;top:-260px;border-radius:50%;background:#5d7df5;filter:blur(90px);opacity:.32}.yellow{position:absolute;width:520px;height:520px;right:120px;bottom:-220px;border-radius:48% 52% 60% 40%;background:#ffc857;transform:rotate(-20deg)}.orb{position:absolute;width:520px;height:520px;right:160px;top:220px;border:2px dashed rgba(255,255,255,.28);border-radius:50%}.content{position:absolute;left:130px;top:130px;width:1030px}.kicker{display:flex;align-items:center;gap:18px;color:#57d7cf;font-size:24px;font-weight:700;letter-spacing:.18em;text-transform:uppercase}.kicker:before{content:"";width:58px;height:4px;background:#57d7cf}.title{margin:42px 0 28px;font:700 120px/1 "Space Grotesk",sans-serif;letter-spacing:-.06em}.title span{color:#ffc857}.lead{width:900px;margin:0;color:#c4d1dc;font-size:42px;line-height:1.35}.tags{display:flex;gap:16px;margin-top:60px}.tag{padding:14px 25px;border:1px solid rgba(255,255,255,.25);border-radius:999px;font-size:24px;font-weight:700;background:rgba(255,255,255,.06)}.number{position:absolute;right:250px;top:340px;z-index:2;font:700 170px "Space Grotesk";color:#08131f}.caption{position:absolute;left:130px;bottom:76px;color:#90a4b4;font-size:22px;letter-spacing:.08em}.scene{position:absolute;inset:0}.scene-two,.scene-three,.scene-four{opacity:0}.achievement{display:grid;grid-template-columns:1fr 1fr;gap:34px;margin-top:50px;width:1200px}.card{padding:34px;border:1px solid rgba(255,255,255,.14);border-radius:26px;background:rgba(255,255,255,.065)}.card strong{display:block;color:#ffc857;font:700 48px "Space Grotesk"}.card span{display:block;margin-top:12px;color:#c4d1dc;font-size:25px}.quote{width:1380px;margin:90px 0 0;font:700 86px/1.15 "Space Grotesk";letter-spacing:-.045em}.quote em{color:#57d7cf;font-style:normal}.scene-four{text-align:center}.scene-four .content{left:210px;top:230px;width:1500px}.scene-four .title{font-size:128px}.scene-four .lead{width:auto}.underline{width:0;height:12px;margin:35px auto;background:#ffc857;border-radius:10px}
+  </style>
+</head>
+<body>
+  <div class="stage" data-composition-id="enzo-dsa-intro" data-start="0" data-duration="15" data-width="1920" data-height="1080">
+    <div class="grid"></div><div class="glow"></div><div class="yellow"></div><div class="orb"></div><div class="number">01</div>
+    <section class="scene scene-one">
+      <div class="content"><div class="kicker">DSA-Sec 2027 portfolio</div><h1 class="title">Hello, I am <span>Enzo.</span></h1><p class="lead">A curious coder, robotics enthusiast, and problem-solver.</p><div class="tags"><span class="tag">Python</span><span class="tag">Robotics</span><span class="tag">Computational Thinking</span></div></div>
+    </section>
+    <section class="scene scene-two">
+      <div class="content"><div class="kicker">Selected milestones</div><h2 class="title">Learning through <span>challenge.</span></h2><div class="achievement"><div class="card"><strong>Gold</strong><span>Bebras Computational Thinking Challenge 2026</span></div><div class="card"><strong>Silver</strong><span>Hwa Chong Info-communications Challenge 2026</span></div><div class="card"><strong>#105</strong><span>ICode Global Hackathon 2024, worldwide</span></div><div class="card"><strong>Top 8</strong><span>National Thinkers' Challenge 2025</span></div></div></div>
+    </section>
+    <section class="scene scene-three">
+      <div class="content"><div class="kicker">My approach</div><p class="quote">Break the problem down.<br><em>Test an idea.</em><br>Learn, improve, repeat.</p></div>
+    </section>
+    <section class="scene scene-four">
+      <div class="content"><div class="kicker" style="justify-content:center">Ready for the next challenge</div><h2 class="title">Keep learning.<br><span>Keep building.</span></h2><div class="underline"></div><p class="lead">Enzo Chong Jun Kai &bull; DSA-Sec 2027</p></div>
+    </section>
+    <div class="caption">ENZO CHONG JUN KAI &nbsp;&bull;&nbsp; COMPUTING &nbsp;&bull;&nbsp; ROBOTICS</div>
+    <script src="vendor/gsap.min.js"></script>
+    <script>
+      const tl=gsap.timeline({paused:true});
+      tl.from('.scene-one .kicker',{opacity:0,x:-50,duration:.6},0)
+        .from('.scene-one .title',{opacity:0,y:60,duration:.8},.25)
+        .from('.scene-one .lead',{opacity:0,y:30,duration:.7},.65)
+        .from('.scene-one .tag',{opacity:0,y:24,stagger:.12,duration:.5},1)
+        .to('.scene-one',{opacity:0,duration:.6},3.2)
+        .to('.number',{textContent:'02',snap:{textContent:1},duration:.2},3.4)
+        .to('.scene-two',{opacity:1,duration:.5},3.5)
+        .from('.scene-two .title',{opacity:0,y:45,duration:.7},3.55)
+        .from('.card',{opacity:0,y:35,stagger:.15,duration:.6},4)
+        .to('.scene-two',{opacity:0,duration:.6},7.3)
+        .to('.number',{textContent:'03',snap:{textContent:1},duration:.2},7.5)
+        .to('.scene-three',{opacity:1,duration:.5},7.6)
+        .from('.quote',{opacity:0,x:-60,duration:.8},7.8)
+        .to('.orb',{rotation:90,duration:3,ease:'none'},7.6)
+        .to('.scene-three',{opacity:0,duration:.6},10.5)
+        .to('.number',{opacity:0,duration:.3},10.6)
+        .to('.scene-four',{opacity:1,duration:.6},10.9)
+        .from('.scene-four .title',{opacity:0,scale:.92,duration:.8},11)
+        .to('.underline',{width:650,duration:.7},11.7)
+        .from('.scene-four .lead',{opacity:0,y:25,duration:.6},12.1);
+      window.__timelines=window.__timelines||{};
+      window.__timelines['enzo-dsa-intro']=tl;
+      if(new URLSearchParams(location.search).has('autoplay')) tl.play();
+    </script>
+  </div>
+</body>
+</html>
