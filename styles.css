@@ -168,6 +168,12 @@ h1 strong { display: block; color: var(--blue); font-weight: 600; }
 .project-details li { display: grid; grid-template-columns: 110px 1fr; gap: 16px; padding: 13px 0; border-bottom: 1px solid var(--line); font-size: .9rem; }
 .project-details span { color: var(--muted); }
 .text-link { display: inline-flex; gap: 10px; color: var(--blue); font-weight: 700; text-decoration: none; border-bottom: 1px solid currentColor; }
+.text-link-muted { color: var(--muted); border-bottom-style: dashed; }
+.project-gallery { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 24px; }
+.project-link-card { display: flex; min-height: 170px; flex-direction: column; align-items: flex-start; justify-content: space-between; padding: 22px; background: #fffaf0; border: 1px solid var(--line); border-radius: 22px; box-shadow: 0 14px 35px rgba(8,19,31,.07); }
+.project-link-card p { margin: 0; color: var(--blue); font-size: .7rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+.project-link-card h3 { margin: 14px 0 24px; font-size: 1.35rem; letter-spacing: -.03em; }
+.project-link-card.no-link { background: #f2efe7; }
 .build-process { margin-top: 54px; padding-top: 28px; border-top: 1px solid var(--ink); }
 .process-label { margin: 0 0 26px; color: var(--blue); font-size: .75rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
 .build-process ol { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; margin: 0; padding: 0; list-style: none; }
@@ -233,6 +239,7 @@ details p { margin: -8px 0 28px; padding-right: 40px; color: var(--muted); }
   .hero { grid-template-columns: 1fr; gap: 20px; padding-top: 60px; }.hero-visual{min-height:480px}.hero-copy{text-align:left}
   .about-grid, .growth-grid, .interview { grid-template-columns: 1fr; gap: 50px; }.interview-intro{position:static}
   .project-card { grid-template-columns: 1fr; }.project-preview{min-height:480px;margin:20px 20px 0}.project-copy{padding:40px}
+  .project-gallery { grid-template-columns: repeat(2, 1fr); }
   .story-map { grid-template-columns: repeat(5,1fr); min-height:auto; padding-block:18px }.story-map .proof-intro{grid-column:1/-1;border-bottom:1px solid var(--line);padding-left:0}.story-map > *{padding:18px 12px}.story-map a:nth-child(2){border-left:0}
   .build-process ol { grid-template-columns: 1fr 1fr; }.build-process li:nth-child(2) > span::after { display:none; }
   .achievement-grid::before{left:22px}.achievement-card{width:calc(100% - 55px);margin-left:55px!important}.achievement-card::after{left:auto!important;right:100%!important;width:33px}
@@ -243,6 +250,7 @@ details p { margin: -8px 0 28px; padding-right: 40px; color: var(--muted); }
   .hero-visual{min-height:410px}.orbit-one{width:340px;height:340px}.orbit-two{width:280px;height:280px}.floating-chip{font-size:.68rem}.chip-one{right:2%}.chip-two{left:2%}
   .achievement-grid, .more-achievements { grid-template-columns: 1fr; }.achievement-card{min-height:auto}.more-achievements div{grid-template-columns:1fr;gap:6px}
   .project-preview{min-height:390px;margin:12px 12px 0}.project-copy{padding:34px 24px}.project-details li{grid-template-columns:1fr;gap:2px}
+  .project-gallery { grid-template-columns: 1fr; }.project-link-card { min-height: 140px; }
   .beyond-card{padding:26px;box-shadow:7px 8px 0 var(--yellow)}.footer .shell{display:block}.project-pills span:last-child{display:none}
   .story-map{grid-template-columns:1fr 1fr}.story-map a{border-top:1px solid var(--line)}.story-map a:nth-child(even){border-left:0}.story-map a:last-child{grid-column:1/-1;border-left:0}.story-map > *{padding:15px 10px}.story-map .proof-intro{padding-inline:0!important}
   .story-bridge{min-height:210px}.achievement-card{padding:28px 24px}.achievement-grid::before{left:12px}.achievement-card{width:calc(100% - 34px);margin-left:34px!important}.achievement-card::after{width:21px}
