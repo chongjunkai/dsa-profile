@@ -210,6 +210,7 @@ details p { margin: -8px 0 28px; padding-right: 40px; color: var(--muted); }
 .footer .shell { display: flex; justify-content: space-between; gap: 20px; }
 
 .video-dialog { width: min(1120px, calc(100% - 36px)); padding: 0; overflow: hidden; background: var(--navy); color: white; border: 1px solid rgba(255,255,255,.15); border-radius: 28px; box-shadow: 0 35px 100px rgba(0,0,0,.45); }
+.video-dialog.is-open { position: fixed; inset: 50% auto auto 50%; transform: translate(-50%, -50%); z-index: 60; }
 .video-dialog::backdrop { background: rgba(5, 13, 21, .82); backdrop-filter: blur(8px); }
 .dialog-top { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 22px 26px; }
 .dialog-top span { color: var(--cyan); font-size: .68rem; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; }
@@ -246,5 +247,5 @@ details p { margin: -8px 0 28px; padding-right: 40px; color: var(--muted); }
   .story-map{grid-template-columns:1fr 1fr}.story-map a{border-top:1px solid var(--line)}.story-map a:nth-child(even){border-left:0}.story-map a:last-child{grid-column:1/-1;border-left:0}.story-map > *{padding:15px 10px}.story-map .proof-intro{padding-inline:0!important}
   .story-bridge{min-height:210px}.achievement-card{padding:28px 24px}.achievement-grid::before{left:12px}.achievement-card{width:calc(100% - 34px);margin-left:34px!important}.achievement-card::after{width:21px}
   .build-process ol{grid-template-columns:1fr}.build-process li > span::after{display:none}.build-process li{display:grid;grid-template-columns:42px 1fr}.build-process li p{grid-column:2}.build-process li > span{grid-row:1/3}
-  .dialog-top{padding:17px}.dialog-top h2{font-size:1.05rem}.dialog-note{padding-inline:17px}.video-dialog{border-radius:20px}
+  .dialog-top{padding:14px 16px}.dialog-top h2{font-size:1rem}.dialog-note{padding:10px 16px 14px}.video-dialog{width:calc(100% - 18px);border-radius:18px}.video-frame-wrap{aspect-ratio:16/9}
 }

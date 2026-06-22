@@ -52,14 +52,24 @@ const sectionObserver = new IntersectionObserver((entries) => {
 sections.forEach((section) => sectionObserver.observe(section));
 
 const closeVideo = () => {
-  videoDialog.close();
+  if (typeof videoDialog.close === 'function' && videoDialog.open) {
+    videoDialog.close();
+  } else {
+    videoDialog.removeAttribute('open');
+  }
+  videoDialog.classList.remove('is-open');
   videoFrame.removeAttribute('src');
   document.body.classList.remove('dialog-open');
 };
 
 videoTrigger.addEventListener('click', () => {
   videoFrame.src = videoFrame.dataset.src;
-  videoDialog.showModal();
+  if (typeof videoDialog.showModal === 'function') {
+    videoDialog.showModal();
+  } else {
+    videoDialog.setAttribute('open', '');
+    videoDialog.classList.add('is-open');
+  }
   document.body.classList.add('dialog-open');
 });
 videoClose.addEventListener('click', closeVideo);
