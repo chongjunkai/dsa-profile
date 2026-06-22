@@ -129,6 +129,7 @@ h1 strong { display: block; color: var(--blue); font-weight: 600; }
 .featured .lesson { color: #e4e8ff; }
 .achievement-photo { margin: 24px 0 0; overflow: hidden; border: 1px solid rgba(255,255,255,.28); border-radius: 18px; box-shadow: 0 18px 45px rgba(8,19,31,.18); }
 .achievement-photo img { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+.achievement-photo-portrait img { aspect-ratio: 4 / 5; object-position: center; }
 
 .competition-notes { margin: 26px 0 0; display: grid; gap: 14px; }
 .competition-notes div, .lesson-details { padding-top: 14px; border-top: 1px solid rgba(255,255,255,.11); }
